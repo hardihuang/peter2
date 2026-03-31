@@ -22,6 +22,34 @@ A 2D pixel art PVP fighting game similar to Super Smash Bros.
 
 ---
 
+## Backup System
+
+### Friday Backups
+Automatic backups of Friday's data are created every 2 weeks.
+
+**Location:** `friday-backups/`
+
+**Structure:**
+```
+friday-backups/
+├── 2026-03-31/          # Backup from March 31, 2026
+│   ├── extensions/      # OpenClaw extensions
+│   ├── identity/        # Device identity
+│   ├── logs/            # System logs
+│   ├── media/           # Media files
+│   ├── memory/          # Memory files
+│   └── ...              # Other config files
+└── 2026-04-14/          # Next backup (only 2 kept)
+```
+
+**Retention:** Only the 2 most recent backups are kept. Older backups are automatically deleted when a new one is created.
+
+**Schedule:** Every 14 days at midnight (00:00)
+
+**Manual Backup:** Run `./scripts/backup-friday.sh` from the repo root
+
+---
+
 *Managed by Friday* 🤖
 
 ### Friday Intro Page
